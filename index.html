@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Gestión de Préstamos</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastify-js/1.12.0/toastify.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Sistema de Gestión de Préstamos</h1>
+        
+        <div id="alertasProximosPagos" class="alertas-container"></div>
+
+        <form id="cuentasForm" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="nombre">Nombres:</label>
+                <input type="text" id="nombre" name="nombre" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="apellidos">Apellidos:</label>
+                <input type="text" id="apellidos" name="apellidos" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="fecha">Fecha:</label>
+                <input type="date" id="fecha" name="fecha" required>
+                <small>Día que se realiza el préstamo</small>
+            </div>
+            
+            <div class="form-group">
+                <label for="montoPrestamo">Monto Préstamo:</label>
+                <input type="number" id="montoPrestamo" name="montoPrestamo" step="0.01" min="0" required>
+                <small>Valor numérico en pesos</small>
+            </div>
+            
+            <div class="form-group">
+                <label for="interes">Interés:</label>
+                <input type="number" id="interes" name="interes" step="0.01" readonly>
+                <small>Valor numérico (Monto préstamo × 0.20)</small>
+            </div>
+            
+            <div class="form-group">
+                <label for="total">Total:</label>
+                <input type="number" id="total" name="total" step="0.01" readonly>
+                <small>Valor numérico (Monto préstamo + Interés)</small>
+            </div>
+            
+            <div class="form-group">
+                <label for="observaciones">Observaciones:</label>
+                <textarea id="observaciones" name="observaciones" rows="3"></textarea>
+                <small>Texto</small>
+            </div>
+            
+            <div class="form-group">
+                <label for="abonoInteres">Abono Interés:</label>
+                <input type="number" id="abonoInteres" name="abonoInteres" step="0.01" min="0">
+                <small>Valor numérico (Total - Interés)</small>
+            </div>
+            
+            <div class="form-group">
+                <label for="abonoCapital">Abono Capital:</label>
+                <input type="number" id="abonoCapital" name="abonoCapital" step="0.01" min="0">
+                <small>Valor numérico</small>
+            </div>
+            
+            <div class="form-group">
+                <label for="saldoRestante">Saldo Restante:</label>
+                <input type="number" id="saldoRestante" name="saldoRestante" step="0.01" readonly>
+                <small>Valor numérico (Total - Abono interés - Abono capital)</small>
+            </div>
+            
+            <button type="submit">Guardar Registro</button>
+        </form>
+
+        <div class="registros-container">
+            <h2>Registros Existentes</h2>
+            <div class="table-responsive">
+                <table id="registrosTable">
+                    <thead>
+                        <tr>
+                            <th>Nombre Completo</th>
+                            <th>Fecha</th>
+                            <th>Monto Préstamo</th>
+                            <th>Total</th>
+                            <th>Saldo Restante</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="registrosBody"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastify-js/1.12.0/toastify.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
