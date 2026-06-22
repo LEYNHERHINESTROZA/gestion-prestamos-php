@@ -1,0 +1,77 @@
+{
+    "kpis": {
+        "total_prestado": 285581588.93000007,
+        "total_intereses": 57116317.769999996,
+        "saldo_restante": 177438245.06,
+        "cantidad": 100
+    },
+    "grafico_temporal": {
+        "labels": [
+            "2025-07",
+            "2025-08",
+            "2025-09",
+            "2025-10",
+            "2025-11",
+            "2025-12",
+            "2026-01",
+            "2026-02",
+            "2026-03",
+            "2026-04",
+            "2026-05",
+            "2026-06"
+        ],
+        "valores": [
+            19816092.02,
+            21573244.95,
+            24339398.59,
+            26092117.23,
+            20006876.490000002,
+            11558784.54,
+            40193498.95,
+            21217129.03,
+            19454063.14,
+            32013356.03,
+            25920102.07,
+            23396925.89
+        ]
+    },
+    "grafico_estado_pagos": {
+        "labels": [
+            "Abono Capital",
+            "Abono Interés",
+            "Saldo Restante"
+        ],
+        "valores": [
+            137716384.71,
+            27543276.93,
+            177438245.06
+        ]
+    },
+    "top_prestamos": [
+        {
+            "nombre_completo": "Lucía Martínez",
+            "monto_prestamo": 4957101.5,
+            "fecha": "2025-10-01"
+        },
+        {
+            "nombre_completo": "Elena López",
+            "monto_prestamo": 4953706.17,
+            "fecha": "2026-04-14"
+        },
+        {
+            "nombre_completo": "Carlos López",
+            "monto_prestamo": 4881539.37,
+            "fecha": "2025-09-07"
+        },
+        {
+            "nombre_completo": "Carlos Pérez",
+            "monto_prestamo": 4866877.27,
+            "fecha": "2026-04-08"
+        },
+        {
+            "nombre_completo": "Juan Rodríguez",
+            "monto_prestamo": 4628180.21,
+            "fecha": "2026-01-13"
+        }
+    ]
+}

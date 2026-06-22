@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard de Análisis - Gestión de Préstamos</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Custom CSS for Dashboard -->
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+    <div class="dashboard-wrapper">
+        <header class="dash-header">
+            <div class="header-left">
+                <h1>📊 Análisis de Préstamos</h1>
+                <p>Métricas calculadas con base en registros simulados</p>
+            </div>
+            <div class="header-right">
+                <a href="index.html" class="btn-back">⬅ Volver al Registro</a>
+                <button id="theme-btn" class="theme-toggle" aria-label="Cambiar tema">🌙</button>
+            </div>
+        </header>
+
+        <main class="dash-content">
+            <!-- KPIs -->
+            <div class="kpi-container">
+                <div class="kpi-box glass-panel">
+                    <div class="kpi-icon blue">💵</div>
+                    <div class="kpi-data">
+                        <h4>Total Prestado</h4>
+                        <span id="kpi-prestado" class="kpi-num">...</span>
+                    </div>
+                </div>
+                <div class="kpi-box glass-panel">
+                    <div class="kpi-icon orange">📈</div>
+                    <div class="kpi-data">
+                        <h4>Intereses Esperados</h4>
+                        <span id="kpi-intereses" class="kpi-num">...</span>
+                    </div>
+                </div>
+                <div class="kpi-box glass-panel">
+                    <div class="kpi-icon red">⚖️</div>
+                    <div class="kpi-data">
+                        <h4>Saldo Restante</h4>
+                        <span id="kpi-restante" class="kpi-num">...</span>
+                    </div>
+                </div>
+                <div class="kpi-box glass-panel">
+                    <div class="kpi-icon green">👥</div>
+                    <div class="kpi-data">
+                        <h4>Total Préstamos</h4>
+                        <span id="kpi-cantidad" class="kpi-num">...</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Charts Section -->
+            <div class="charts-section">
+                <div class="chart-box glass-panel col-span-2">
+                    <h3>Evolución de Préstamos Otorgados (Último Año)</h3>
+                    <div class="canvas-wrapper">
+                        <canvas id="chartTemporal"></canvas>
+                    </div>
+                </div>
+
+                <div class="chart-box glass-panel">
+                    <h3>Estado General de Pagos</h3>
+                    <div class="canvas-wrapper">
+                        <canvas id="chartPagos"></canvas>
+                    </div>
+                </div>
+
+                <div class="chart-box glass-panel col-span-2">
+                    <h3>Top 5 Préstamos Más Altos</h3>
+                    <div class="table-wrapper">
+                        <table id="topTable">
+                            <thead>
+                                <tr>
+                                    <th>Deudor</th>
+                                    <th>Fecha</th>
+                                    <th>Monto Otorgado</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Data will be injected here -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/dashboard.js"></script>
+</body>
+</html>
