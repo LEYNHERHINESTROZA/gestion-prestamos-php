@@ -70,3 +70,10 @@ gestion-prestamos-php/
 ## 👨‍💻 Autor
 
 **Leynher Hinestroza** - Desarrollador y Analista de Datos.
+---
+
+**Leynher Ferney Hinestroza Mosquera**
+*Desarrollador Fullstack & Analista de Datos*
+- ?? [LinkedIn](https://linkedin.com) (En construcci�n)
+- ?? [GitHub](https://github.com/LEYNHERHINESTROZA)
+- ?? Email: leynercrs@gmail.com
